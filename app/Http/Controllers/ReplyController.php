@@ -14,6 +14,7 @@ class ReplyController extends Controller {
         $this->middleware('JWT', ['except' => ['index','show']]);
 	}
 	
+
 	public function index( Question $question ) {
 		return ReplyResource::collection($question->replies()->latest()->get());
 	}

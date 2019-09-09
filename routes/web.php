@@ -11,11 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
-Route::get('/map', function () {
-    return view('map');
-});
+Route::view('/','home');
+
+Route::view('/{any}','home');
